@@ -12,11 +12,16 @@ namespace Shape_studio
 {
     public partial class Form1 : Form
     {
+        Image image_field;
+
         public Form1()
         {
             InitializeComponent();
             this.Width = 500;
             this.Height = 500;
+
+            string filename = System.IO.Path.Combine(new string[] { "..", "..", "spoke.jfif" });
+            image_field = Image.FromFile(filename);
 
         }
 
@@ -25,7 +30,7 @@ namespace Shape_studio
 
         }
 
-        private void Form1_Paint(object sender, PaintEventArgs e)
+        public void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
             Pen myPen = new Pen(Color.Black);
@@ -39,6 +44,9 @@ namespace Shape_studio
             g.DrawEllipse(myPen, 300, 300, 100, 100);
             g.FillEllipse(mylolbrush, 300, 300, 100, 100);
             g.FillEllipse(mylolbrush, 100, 300, 100, 100);
+            g.DrawImage(image_field, 300, 300);
+
+
 
 
 
