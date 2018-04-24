@@ -13,7 +13,8 @@ namespace Shape_studio
     public partial class Form1 : Form
     {
         Image image_field;
-
+        int x;
+        int y;
         public Form1()
         {
             InitializeComponent();
@@ -44,15 +45,24 @@ namespace Shape_studio
             g.DrawEllipse(myPen, 300, 300, 100, 100);
             g.FillEllipse(mylolbrush, 300, 300, 100, 100);
             g.FillEllipse(mylolbrush, 100, 300, 100, 100);
-            g.DrawImage(image_field, 300, 300);
+            g.DrawImage(image_field, x, y);
 
 
 
 
+        }
+
+        private void Form1_MouseClick(object sender, MouseEventArgs e)
+        {
+            // move the picture of a wheel
+
+            // Step 1: Change some data (field?) that remembers where the wheel is
 
 
-
-
+            y = y + 15;
+            x = x + 15;
+            // Step 2: Re-draw everything
+            Refresh();
 
         }
     }
