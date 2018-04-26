@@ -15,6 +15,37 @@ namespace Shape_studio
         Image image_field;
         int x;
         int y;
+        int xq;
+        int yq;
+        int z;
+        int a;
+        int b;
+        int c;
+        int d;
+        int aq;
+        int f;
+        int gq;
+        int h;
+        int i;
+        int j;
+        int k;
+        int l;
+        int m;
+        int n;
+        int o;
+        int p;
+        int q;
+        int r;
+        int s;
+        int t;
+        int uq;
+        int vq;
+        int w;
+
+
+
+
+
         public Form1()
         {
             InitializeComponent();
@@ -38,15 +69,15 @@ namespace Shape_studio
             Brush myBrush = new SolidBrush(Color.Yellow);
             Brush mylolbrush = new SolidBrush(Color.Black);
 
-
-            g.DrawRectangle(myPen, 100, 100, 200, 150);
-            g.FillRectangle(myBrush, 100, 100, 200, 150);
-            g.DrawEllipse(myPen, 100, 300, 100, 100);
-            g.DrawEllipse(myPen, 300, 300, 100, 100);
-            g.FillEllipse(mylolbrush, 300, 300, 100, 100);
-            g.FillEllipse(mylolbrush, 100, 300, 100, 100);
+            //the fields below designate where the shapes are located. Some of the shapes are stationary and do NOT move, hence the fixed points.
+            g.DrawRectangle(myPen, a, b, 1, 100);
+            g.FillRectangle(myBrush, aq, f, gq, h);
+            g.DrawEllipse(myPen, i, j, k, l);
+            g.DrawEllipse(myPen, m, n, o, p);
+            g.FillEllipse(mylolbrush, q, r, s, t);
+            g.FillEllipse(mylolbrush, uq, vq, w, z);
+            g.DrawImage(image_field, xq, yq);
             g.DrawImage(image_field, x, y);
-
 
 
 
@@ -61,9 +92,43 @@ namespace Shape_studio
 
             y = y + 15;
             x = x + 15;
+            a = a + 25;
+            b = b + 25;
+            c = c + 50;
+            d = d + 45;
+            aq = aq + 25;
+            f = f + 25;
+            gq = gq + 50;
+            h = h + 45;
+            i = i + 25;
+            j = j + 50;
+            k = k + 25;
+            l = l + 25;
+            m = m + 75;
+            n = n + 75;
+            o = o + 25;
+            p = p + 25;
+            q = q + 75;
+            r = r + 75;
+            s = s + 25;
+            t = t + 25;
+            uq = uq + 25;
+            vq = vq + 25;
+            w = w + 25;
+            z = z + 10;
+            xq = xq + 7;
+            yq = yq + 51;
+
             // Step 2: Re-draw everything
             Refresh();
 
         }
-    }
+    }//   g.DrawRectangle(myPen, 100, 100, 200, 150);
+     //g.FillRectangle(myBrush, 100, 100, 200, 150);
+     //  g.DrawEllipse(myPen, 100, 300, 100, 100);
+     //g.DrawEllipse(myPen, 300, 300, 100, 100);
+     //g.FillEllipse(mylolbrush, 300, 300, 100, 100);
+     //g.FillEllipse(mylolbrush, 100, 300, 100, 100);
+     //g.DrawImage(image_field, x, y);
+
 }
