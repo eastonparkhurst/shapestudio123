@@ -123,7 +123,7 @@ namespace Shape_studio
             Refresh();
 
         }
-
+        //the code below reacts to you clicking and moving the mouse.
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button != MouseButtons.Left)
