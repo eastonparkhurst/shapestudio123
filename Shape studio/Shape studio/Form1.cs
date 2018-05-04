@@ -65,15 +65,15 @@ namespace Shape_studio
         public void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            Pen myPen = new Pen(Color.Black);
-            Brush myBrush = new SolidBrush(Color.Yellow);
-            Brush mylolbrush = new SolidBrush(Color.Black);
+            Pen myPen = new Pen(Color.Red);
+            Brush myBrush = new SolidBrush(Color.Green);
+            Brush mylolbrush = new SolidBrush(Color.Blue);
 
             //the fields below designate where the shapes are located. Some of the shapes are stationary and do NOT move, hence the fixed points.
-            g.DrawRectangle(myPen, a, b, 1, 100);
+            g.DrawRectangle(myPen, a, b, c, d);
             g.FillRectangle(myBrush, aq, f, gq, h);
             g.DrawEllipse(myPen, i, j, k, l);
-            g.DrawEllipse(myPen, m, n, o, p);
+            g.DrawEllipse(myPen, m, n, 5, 5);
             g.FillEllipse(mylolbrush, q, r, s, t);
             g.FillEllipse(mylolbrush, uq, vq, w, z);
             g.DrawImage(image_field, xq, yq);
@@ -123,12 +123,24 @@ namespace Shape_studio
             Refresh();
 
         }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                return;
+            }
+            xq = xq * 20;
+
+
+            // The left button is being pressed, so go ahead and move stuff
+        }
     }//   g.DrawRectangle(myPen, 100, 100, 200, 150);
      //g.FillRectangle(myBrush, 100, 100, 200, 150);
      //  g.DrawEllipse(myPen, 100, 300, 100, 100);
      //g.DrawEllipse(myPen, 300, 300, 100, 100);
      //g.FillEllipse(mylolbrush, 300, 300, 100, 100);
      //g.FillEllipse(mylolbrush, 100, 300, 100, 100);
-     //g.DrawImage(image_field, x, y);
+
 
 }
