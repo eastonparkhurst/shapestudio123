@@ -131,7 +131,9 @@ namespace Shape_studio
                 return;
             }
             xq = xq * 20;
-
+            x = x + 10;
+            y = y + 5;
+            Refresh();
 
             // The left button is being pressed, so go ahead and move stuff
         }
