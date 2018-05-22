@@ -119,7 +119,7 @@ namespace Shape_studio
             xq = xq + 7;
             yq = yq + 51;
 
-            // Step 2: Re-draw everything
+            //Step 2: Re - draw everything
             Refresh();
 
         }
@@ -130,12 +130,28 @@ namespace Shape_studio
             {
                 return;
             }
-            xq = xq * 20;
-            x = x + 10;
-            y = y + 5;
+
+            xq = xq + 1 / 5;
+            x = x + 1;
+
+            y = y + 0
+                ;
             Refresh();
 
+
+
+
             // The left button is being pressed, so go ahead and move stuff
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            bool isMouseDown;
+            int mousestartx;
+            int mousestarty;
+            int imagestartx;
+                int imagestarty;
+                
         }
     }//   g.DrawRectangle(myPen, 100, 100, 200, 150);
      //g.FillRectangle(myBrush, 100, 100, 200, 150);
