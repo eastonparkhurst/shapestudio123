@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Shape_studio
 {
     public partial class Form1 : Form
-    {
+    {//these ints and image fields initially give names to the objects below all this.
         Image image_field;
         int x;
         int y;
@@ -46,6 +46,7 @@ namespace Shape_studio
 
 
 
+        //the fields below create the spoke image and set its size.
         public Form1()
         {
             InitializeComponent();
@@ -61,7 +62,7 @@ namespace Shape_studio
         {
 
         }
-
+        //the fields her create the graphics and draw them out based on the names described.
         public void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
@@ -82,10 +83,10 @@ namespace Shape_studio
 
 
         }
-
+        //mouseclick makes input from the mouse clicked down move the shapes.
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
-            // move the picture of a wheel
+            // move the picture of the wheel
 
             // Step 1: Change some data (field?) that remembers where the wheel is
 
@@ -117,9 +118,9 @@ namespace Shape_studio
             w = w + 25;
             z = z + 10;
             xq = xq + 7;
-            yq = yq + 51;
+            yq = yq + 50;
 
-            //Step 2: Re - draw everything
+            //Step 2: Re - draw everything once it moves
             Refresh();
 
         }
@@ -141,17 +142,26 @@ namespace Shape_studio
 
 
 
-            // The left button is being pressed, so go ahead and move stuff
+            // The left button is being pressed, so go ahead and move stuff (NOT FINISHED)
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
-            bool isMouseDown;
-            int mousestartx;
-            int mousestarty;
-            int imagestartx;
-                int imagestarty;
-                
+            //Ismousedown = e.form1_mousedown;
+            //bool isMouseDown
+            //if (bool mousestart1 = x;
+            //int mousestart2 = y;
+            //int imagestart = x;
+            //int imagestart2 = y;
+            //Refresh();
+
+
+
+            //    else;
+
+
+
+
         }
     }//   g.DrawRectangle(myPen, 100, 100, 200, 150);
      //g.FillRectangle(myBrush, 100, 100, 200, 150);
